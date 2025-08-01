@@ -1,4 +1,4 @@
-/* Basic template */
+/* Basic template that applies to every element*/
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,36 @@
 
 /* Body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Playfair Display, sans-serif;
     background-color: #f9f9f9;
-    padding: 20px;
-    color: #333;
+    color: #413b3b;
+    height: 100vh;
+}
+
+#widget {
+    /*width of the box */
+    width: 240px;
+    background: white;
+    padding: 15px;
+    /*creates shadow*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /*rounds the corners*/
+    border-radius: 8px;
+    position: fixed;
+    /* places it in center */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input,
+button {
+    /*spands entire widget*/
+    width: 100%;
+    /*space from above ele*/
+    margin-top: 10px;
+    /*space from edges*/
+    padding: 8px;
+    /*normal txt size*/
+    font-size: 1rem;
 }
