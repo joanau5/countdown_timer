@@ -7,19 +7,29 @@
 
 /* Body styling */
 body {
-    font-family: Playfair Display, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
-    color: #413b3b;
+    color: #0b0a0a;
     height: 100vh;
+}
+
+#title {
+    font-size: 1.8rem;
+    /* make text bigger */
+    text-align: center;
+    /* center the text */
+    margin-bottom: 10px;
+    /* space below */
+    font-weight: bold;
 }
 
 #widget {
     /*width of the box */
-    width: 240px;
+    width: 350px;
     background: white;
     padding: 15px;
     /*creates shadow*/
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     /*rounds the corners*/
     border-radius: 8px;
     position: fixed;
@@ -29,8 +39,26 @@ body {
     transform: translate(-50%, -50%);
 }
 
-input,
-button {
+#settingsToggle {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+#display {
+    font-size: 3rem;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    /* optional, makes it thicker */
+}
+
+input {
     /*spands entire widget*/
     width: 100%;
     /*space from above ele*/
@@ -39,4 +67,50 @@ button {
     padding: 8px;
     /*normal txt size*/
     font-size: 1rem;
+}
+
+#buttonContainer {
+    display: flex;
+    gap: 10px;
+    /* space between buttons */
+    margin-top: 10px;
+    /* spacing from above elements */
+}
+
+#buttonContainer button {
+    flex: 1;
+    /* buttons share equal width */
+    padding: 8px;
+    font-size: 1rem;
+}
+
+#settingsPanel {
+    display: none;
+    /* hidden by default */
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    width: 250px;
+    background: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+#settingsPanel h4 {
+    margin-top: 0;
+}
+
+#settingsPanel label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#settingsPanel input[type="color"],
+#settingsPanel input[type="file"] {
+    width: 100%;
+    margin-bottom: 15px;
 }

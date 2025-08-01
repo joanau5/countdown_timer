@@ -8,15 +8,31 @@
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!--Add font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 
 <body>
     <div id="widget">
-        <h3>Countdown Timer</h3>
-        <input type="datetime-local" id="targetTime" />
-        <button id="startButton">Start</button>
+        <button id="settingsToggle" title="Settings">⚙️</button>
+        <h3 id="title">Countdown Timer</h3>
         <div id="display">00:00:00</div>
+        <input type="datetime-local" id="targetTime" />
+        <div id="buttonContainer">
+            <button id="startButton">Start</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
     </div>
+
+    <div id="settingsPanel">
+        <h4>Settings:</h4>
+        <label for="bgColorPicker">Background color:</label><br />
+        <input type="color" id="bgColorPicker" /><br /><br />
+
+        <label for="bgImageInput">Upload background image:</label><br />
+        <input type="file" id="bgImageInput" accept="image/*" />
+    </div>
+
 
 
     <!-- Link to JS -->
